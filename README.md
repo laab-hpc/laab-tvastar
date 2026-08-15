@@ -15,4 +15,4 @@ This is open-source software distributed under the BSD 3-Clause (Revised) Licens
 
 ## Acknowledgement
 
-This work was developed as a component of the LAAB-HPC framework which was supported by the Juelich Supercomputing Center at Forschungszentrum Jeulich, Germany through the BMBF project 01-1H1-6013 AP6-NRW Anwenderunterst ̈utzung SiVeGCS and the eSSENCE Programme under the Swedish Government’s Strategic Research Initiative. 
+This work was developed as a component of the LAAB-HPC framework which was supported by the Juelich Supercomputing Center at Forschungszentrum Juelich, Germany through the BMBF project 01-1H1-6013 AP6-NRW Anwenderunterst ̈utzung SiVeGCS and the eSSENCE Programme under the Swedish Government’s Strategic Research Initiative. 
