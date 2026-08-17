@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ior-proj1"
+version = "0.1.0"
+description = "LAAB tutorial project sample"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = [
+  "flask",
+]
+
+[project.scripts]
+laab-dashboard = "laab_proj1.dashboard.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"laab_proj1.dashboard.app1" = ["templates/**/*"]
+"laab_proj1.dashboard.app2" = ["templates/**/*"]
