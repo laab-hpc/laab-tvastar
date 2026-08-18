@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            new_simple_webpage.pl
+        </title>
+    </head>
+<body>
+
+<h1>{{ title }}</h1>
+
+<p>version: {{ version }}</p>
+
+<h2>Libraries</h2>
+
+<ul>
+{% for library in libraries %}
+    <li>{{ library }}</li>
+{% endfor %}
+</ul>
+
+<table border="1">
+
+    <tr>
+        <th>Library</th>
+        <th>GFLOP/s</th>
+    </tr>
+
+    {% for result in results %}
+    <tr>
+        <td>{{ result.library }}</td>
+        <td>{{ result.gflops }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<p>Measured value: {{ value }}</p>
+
+<a href="{{ url_for('help') }}">Help</a>
+
+</body>
+</html>
