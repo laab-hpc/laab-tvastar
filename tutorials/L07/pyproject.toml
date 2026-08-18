@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llview_inspector_test"
+version = "0.1.0"
+description = "LAAB tutorial project sample"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+dependencies = [
+  "flask",
+]
+
+[project.scripts]
+laab-dashboard = "llview_inspector_test.dashboard.dashboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

@@ -1,0 +1,57 @@
+{% extends 'tvst-bases/nav-top.html' %}
+
+
+{% block title %}
+    LLview-LAAB
+{% endblock title %}
+
+
+{% block head %}
+{% endblock head %}
+
+{% block brand_url %}
+{{ url_for('app.index') }}
+{% endblock brand_url %}
+
+{% block brand_name %}
+    LLview-LAAB
+{% endblock brand_name %}
+
+{% block navbar_bg_color %}#012f53{% endblock navbar_bg_color %}
+
+{% block navbar_left %}
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('app.index') }}">Index</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Page 2</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Page 3</a>
+    </li>
+
+{% endblock navbar_left %}
+
+
+{% block navbar_right %}
+    <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+    </li>
+{% endblock navbar_right %}
+
+{% block content %}
+{% endblock content %}
+
+{% block footer %}
+<div class="d-flex justify-content-between w-100">
+    <div>
+    &copy; 2026 Forschungszentrum Jülich GmbH, Germany
+    </div>
+    <div>
+        <a href="{{ url_for('app.acknowledgements') }}" class="btn btn-sm btn-link text-white link-light">Acknowledgements</a>
+    </div>
+</div>
+{% endblock footer %}
+
+{% block end_scripts %}
+{% endblock %}
