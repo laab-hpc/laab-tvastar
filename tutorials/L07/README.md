@@ -77,11 +77,13 @@ Prepare the virtual environment. You only need to do this once.
 ```bash
 ml GCC SciPy-bundle
 python -m venv venv --system-site-packages
+source venv/bin/activate
+pip install -e .
 ```
 
 ## Run dashboard
 
-Activate the virtual environment first.
+Everytime you open a new terminal, load the modules and activate the venv..
 
 ```bash
 ml GCC SciPy-bundle
@@ -89,6 +91,5 @@ source venv/bin/activate
 laab-dashboard
 ```
 
-You need to run `ml GCC SciPy-bundle` every time you open a new terminal.
 
 This opens the web app on port `8000`.
