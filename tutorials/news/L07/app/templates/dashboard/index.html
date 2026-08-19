@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard index title
+{% endblock %}
+
+{% block header %}
+Dashboard index block header
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-grid">
+    
+    {% for kpi in kpis %}
+
+    <div class="card">
+        <div class="card-title">
+            {{ kpi.name }}
+        </div>
+
+        <div class="card-value">
+            {{ kpi.value }}
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<div class="panel">
+    <h2> {{ title }} </h2>
+    
+    <p> Base of Dashboard, version: {{ version }} </p>
+    
+    <table border="1">
+        <tr>
+            <th>Library</th>
+            <th>GFLOP/s</th>
+        </tr>
+
+        {% for result in results %}
+        <tr>
+            <td>{{ result.library }}</td>
+            <td>
+                {{ result.gflops }}
+                {% if result.gflops > 140 %}
+                🚀
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
