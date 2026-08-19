@@ -11,6 +11,21 @@ def index():
     head = "Dashboard"
     title = "Performance Report"
     version = 1.0
+
+    kpis = [
+        {
+            "name": "Users",
+            "value": 128,
+        },
+        {
+            "name": "Revenue",
+            "value": "12,457 €",
+        },
+        {
+            "name": "Orders",
+            "value": 324,
+        },
+    ]
     libraries = [
         "OpenBLAS",
         "MKL",
@@ -27,6 +42,7 @@ def index():
         head=head,
         title=title,
         version=version,
+        kpis=kpis,
         libraries=libraries,
         results=results
         )

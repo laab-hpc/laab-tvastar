@@ -11,35 +11,20 @@ Dashboard index block header
 {% block content %}
 
 <div class="dashboard-grid">
-    <div class="card">
-        <div class="card-title">
-            Users
-        </div>
-
-        <div class="card-value">
-            128
-        </div>
-    </div>
+    
+    {% for kpi in kpis %}
 
     <div class="card">
         <div class="card-title">
-            Revenue
+            {{ kpi.name }}
         </div>
 
         <div class="card-value">
-            12,457
+            {{ kpi.value }}
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-title">
-            Orders
-        </div>
-
-        <div class="card-value">
-            324
-        </div>
-    </div>
+    {% endfor %}
 
 </div>
 
@@ -57,7 +42,12 @@ Dashboard index block header
         {% for result in results %}
         <tr>
             <td>{{ result.library }}</td>
-            <td>{{ result.gflops }}</td>
+            <td>
+                {{ result.gflops }}
+                {% if result.gflops > 140 %}
+                🚀
+                {% endif %}
+            </td>
         </tr>
         {% endfor %}
     </table>
