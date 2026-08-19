@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+
+        <title>
+            {% block title %} Flask Dashboard {% endblock %}
+        </title>
+
+        <link rel="stylesheet"
+        href="{{url_for('static', filename='css/style.css')}}"
+        >
+    </head>
+
+    <body>
+        <div class="app">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    Flask Dashboard base sidebar header
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="{{url_for('dashboard.index') }}">
+                        Dashboard sidebar-nav
+                    </a>
+
+                    <a href="#">
+                        Analytics
+                    </a>
+
+                    <a href="#">
+                        Settings
+                    </a>
+
+                </nav>
+            </aside>
+
+            <div class="main-area">
+                <header class="topbar">
+                    <h1> {% block header %} Dashboard main area {% endblock %} </h1>
+
+                    <div class="user">
+                        User
+                    </div>
+
+                </header>
+            
+                <main>
+                    {% block content %}
+                    {% endblock %}
+                </main>
+
+            
+                <footer>
+                    <p> Flask Dashboard Tutorial </p>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
