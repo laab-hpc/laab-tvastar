@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from app.dashboard.data import head, title, version, kpis, libraries, results
+from app.dashboard.data import head, title, version, kpis, libraries, get_results
 
 dashboard_bp = Blueprint(
     "dashboard", 
@@ -9,6 +9,7 @@ dashboard_bp = Blueprint(
 
 @dashboard_bp.route("/")
 def index():
+    results = get_results()
     
     return render_template(
         "dashboard/index.html",
