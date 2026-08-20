@@ -11,7 +11,7 @@ def main():
     
     from .app import routes
     app.register_blueprint(routes.bp, url_prefix=f'/')
-    app.run(debug=True, port=8000)
+    app.run(debug=True, port=8002)
     
 if __name__ == '__main__':
     main()
