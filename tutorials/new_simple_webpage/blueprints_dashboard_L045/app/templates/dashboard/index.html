@@ -15,15 +15,7 @@ Dashboard index block header
     
     {% for kpi in kpis %}
 
-    <div class="card">
-        <div class="card-title">
-            {{ kpi.name }}
-        </div>
-
-        <div class="card-value">
-            {{ kpi.value }}
-        </div>
-    </div>
+        {{ kpi_card(kpi.name, kpi.value) }}
 
     {% endfor %}
 
