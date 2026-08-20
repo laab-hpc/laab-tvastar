@@ -1,3 +1,21 @@
+from pathlib import Path
+
+import pandas as pd
+
+
+DATA_FILE = (
+    Path(__file__).resolve().parent.parent
+    / "data"
+    / "benchmark.csv"
+)
+
+
+def get_results():
+    df = pd.read_csv(DATA_FILE)
+
+    return df.to_dict(orient="records")
+
+
 head = "Dashboard"
 title = "Performance Report"
 version = 1.0
