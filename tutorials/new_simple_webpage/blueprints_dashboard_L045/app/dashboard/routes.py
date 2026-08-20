@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from app.dashboard.data import head, title, version, kpis, libraries, results
 
 dashboard_bp = Blueprint(
     "dashboard", 
@@ -8,34 +9,6 @@ dashboard_bp = Blueprint(
 
 @dashboard_bp.route("/")
 def index():
-    head = "Dashboard"
-    title = "Performance Report"
-    version = 1.0
-
-    kpis = [
-        {
-            "name": "Users",
-            "value": 128,
-        },
-        {
-            "name": "Revenue",
-            "value": "12,457 €",
-        },
-        {
-            "name": "Orders",
-            "value": 324,
-        },
-    ]
-    libraries = [
-        "OpenBLAS",
-        "MKL",
-        "AOCL"
-        ]
-    results = [
-        {"library": "OpenBLAS", "gflops": 120},
-        {"library": "MKL",      "gflops": 145},
-        {"library": "AOCL",     "gflops": 138}
-        ]
     
     return render_template(
         "dashboard/index.html",
